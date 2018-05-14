@@ -362,7 +362,7 @@ typedef NS_ENUM(NSInteger, FBSDKLoginManagerState) {
   loginParams[@"return_scopes"] = @"true";
   loginParams[@"sdk_version"] = FBSDK_VERSION_STRING;
   loginParams[@"fbapp_pres"] = @([FBSDKInternalUtility isFacebookAppInstalled]);
-  loginParams[@"auth_type"] = @"rerequest";
+  loginParams[@"auth_type"] = @"reauthorize";
   loginParams[@"logging_token"] = serverConfiguration.loggingToken;
 
   [FBSDKInternalUtility dictionary:loginParams setObject:[FBSDKSettings appURLSchemeSuffix] forKey:@"local_client_id"];
